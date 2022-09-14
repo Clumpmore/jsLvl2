@@ -8,7 +8,7 @@ const server = http.createServer((req, res) => {
     res.end(body)
 
 });
+const port = process.env.PORT || 3000
+server.listen(port);
 
-server.listen(3000);
-
-console.log('server started!');
+console.log(`server started on port ${port}!`);
