@@ -1,0 +1,16 @@
+{
+    "data": [
+        {
+            "name": "shoes",
+            "price": 270
+        },
+        {
+            "name": "bracelets",
+            "price": 450
+        },
+        {
+            "name": "ring",
+            "price": 500
+        }
+    ]
+}

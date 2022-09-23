@@ -6,4 +6,112 @@
 header {
     background: #000;
     color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.btn {
+    background-color: rgb(100, 100, 179);
+    padding: 5px 10px;
+    border-radius: 20%;
+    border: 2px solid rgb(42, 70, 107);
+}
+
+.goods-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 30px 0 0 0;
+}
+
+.goods-item {
+    display: flex;
+    width: 300px;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 3px solid rgb(44, 59, 59);
+    background-color: rgb(219, 219, 219);
+    margin: 0 0 30px 0;
+}
+
+
+img {
+    height: 200px;
+    padding: 20px 0 0 0;
+}
+
+.meta {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 0 0 50px;
+
+}
+
+.meta__row {
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+    width: 100%;
+}
+
+.btn_holder {
+    margin: 10px 0 10px 0;
+}
+
+.goods-add {
+    height: 40px;
+    width: 120px;
+}
+
+.cart {
+    position: relative;
+}
+
+.cart_list {
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 0px;
+    background-color: #fff;
+    min-width: 100px;
+    color: #000;
+
+}
+
+.cart_list.shown {
+    display: block;
+}
+
+.cart__good {
+    white-space: nowrap;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+
+}
+
+.showmore {
+    margin: 0 0 0 40px;
+    width: 200px;
+    text-align: center;
+    font-size: 20px;
+}
+
+
+.rmv {
+    background-size: cover;
+    margin: 0 10px 0 15px;
+    padding: 0 0;
+    border-radius: 50%;
+    color: #000;
+    height: 23px;
+    width: 23px;
+    text-align: center;
+    align-content: center;
+    background-color: #fff;
+    border: none;
+    font-weight: bold;
+    background-image: url('https://w7.pngwing.com/pngs/964/968/png-transparent-black-line-illustration-plus-and-minus-signs-computer-icons-plus-minus-sign-meno-symbol-minus.png');
+    background-position: -10px 0;
 }
