@@ -258,6 +258,138 @@ class Button {
     }
 }
 
+class Form {
+
+    constructor() {
+        this.render()
+    }
+    render() {
+        const placeToRender = document.querySelector('footer')
+        if (placeToRender) {
+            placeToRender.classList.add('footer')
+        }
+        placeToRender.classList.add('footer')
+        const block = document.createElement('form')
+        block.classList.add('form')
+        block.innerHTML = `<div class="name" >
+        <label for="name-input" class="text">Введите имя:</label>
+        <input name='name-input' class='name-input' placeholder = 'Только латиница или кириллица' type="text">
+    </div>
+    <div class="number">
+        <label for='number-input' class="text">Введите номер для связи:</label>
+        <input name='number-input' class='number-input' placeholder = '+7(000)000-00-00' type="text">
+    </div>
+    <div class="email">
+        <label for='email-input' class="text">Введите Email для связи:</label>
+        <input mame='email-input' class='email-input' placeholder = 'mymail@mail.ru' type="text">
+    </div>
+    <div class="comment">
+        <label class='text' for="comment-area">Оставьте комментарий:</label>
+        <textarea name="comment-area" class='comment-area' rows="4"></textarea>
+    </div>
+    
+    <input class="submit" type='submit' value='Отправить'></input>
+    <input class='reset' type="reset" value="Сбросить">
+        `
+        placeToRender.appendChild(block)
+        const name = document.querySelector('.name-input')
+        name.addEventListener('keyup', () => {
+
+            this.test(name, /^[a-zа-яё\s]+$/ui)
+        })
+        const number = document.querySelector('.number-input')
+        number.addEventListener('keyup', () => {
+
+            this.test(number, /^\+7\(\d{3}\)\d{3}-\d{2}-\d{2}$/)
+        })
+        const email = document.querySelector('.email-input')
+        email.addEventListener('keyup', () => {
+
+            this.test(email, /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-])+\.([A-Za-z]{2,4})$/)
+        })
+        // test() {
+        //     const regName = /^[a-zа-яё\s]+$/iu
+        //     const name = document.querySelector('.name-input')
+        //     const valName = name.value
+        //     const testName = regName.test(valName)
+        //     if (!testName) {
+        //         name.style = "border:1px solid red"
+        //         console.log('net')
+        //     } else {
+        //         name.style = "border:1px solid green"
+        //         console.log('ds')
+        //     }
+
+        // }
+    }
+    test(input, reg) {
+        console.log(reg)
+        const regName = reg
+        const valName = input.value
+        const testName = regName.test(valName)
+        console.log(input.value)
+
+        console.log(testName)
+        if (valName == '') {
+            console.log(typeof input.value)
+            input.removeAttribute('class')
+            input.classList.add('name-input')
+        } else {
+            while (true) {
+                console.log(typeof valName)
+                if (!testName) {
+                    if (input.classList.length == 1) {
+                        input.classList.add('false')
+                        break
+                    }
+                    else if (input.classList.length >= 1) {
+                        if (input.classList.contains('right')) {
+                            input.classList.remove('right')
+                            input.classList.add('false')
+                            break
+                        } else if (input.classList.contains('false')) {
+                            break
+                        }
+                    }
+                }
+                else if (testName) {
+                    if (input.classList.length == 1) {
+                        input.classList.add('right')
+                        break
+                    }
+                    else if (input.classList.length >= 1) {
+                        if (input.classList.contains('false')) {
+                            input.classList.remove('false')
+                            input.classList.add('right')
+                            break
+                        } else if (input.classList.contains('right')) {
+                            break
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+// class ItemForm {
+//     inner = ''
+//     text = ''
+//     constructor(inner, text) {
+//         this.inner = inner
+//         this.text = text
+//         render(inner)
+//     }
+//     render(inner, text) {
+//         const placeToRender = document.querySelector('.form')
+//         placeToRender.innerHTML = `<div class="${inner}">
+//     <label for="${inner}-input" class="text">${text}:</label>
+//     <input name='${inner}-input' class='${inner}-input' type="text"></div>}`
+
+// }
+// }
+
 
 const CartInstance = new Cart()
 const ListInstance = new List(CartInstance)
+const FormInstance = new Form()

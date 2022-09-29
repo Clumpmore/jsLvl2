@@ -115,3 +115,100 @@ img {
     background-image: url('https://w7.pngwing.com/pngs/964/968/png-transparent-black-line-illustration-plus-and-minus-signs-computer-icons-plus-minus-sign-meno-symbol-minus.png');
     background-position: -10px 0;
 }
+
+.footer {
+    margin: 40px auto;
+    display: flex;
+    justify-content: center;
+    background-color: #ccc;
+}
+
+.form {
+    margin: 20px auto;
+    width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.name {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 8px 0;
+}
+
+.name input {
+    min-width: 215px;
+}
+
+.number {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 8px 0;
+}
+
+.number input {
+    min-width: 215px;
+}
+
+.email {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 0 0 8px 0;
+}
+
+.email input {
+    min-width: 215px;
+}
+
+.comment {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.comment .text {
+    width: 100%;
+}
+
+.comment-area {
+    margin: 8px 0 15px 0;
+    width: 100%;
+
+}
+
+.form .submit {
+
+    font-size: 13px;
+    padding: 5px 8px;
+    font-weight: bold;
+}
+
+.form .reset {
+    margin: 0 5px 0 10px;
+    font-size: 13px;
+    padding: 5px 8px;
+    font-weight: bold;
+}
+
+.right {
+    border: 2px solid rgb(8, 247, 8);
+}
+
+.right:focus {
+    outline: 3px solid rgb(8, 247, 8);
+
+}
+
+.false {
+    border: 2px solid red;
+}
+
+.false:focus {
+    outline: 3px solid red;
+
+}
