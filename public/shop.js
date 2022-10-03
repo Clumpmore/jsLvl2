@@ -41,7 +41,7 @@ class List extends AbstractList {
     }
 
     fetchGoods() {
-        const result = fetch(`http://localhost:3002/page${this._pageCounter}.json`)
+        const result = fetch(`/page${this._pageCounter}.json`)
         return result
             .then(res => {
                 return res.json()
